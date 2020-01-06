@@ -7,7 +7,11 @@
       <th>Orbit Type</th>
       <th>Launch Date</th>
    </tr>
-   <tr *ngFor="let satellite of satellites">
-      {{satellite.name}}
+   <tr *ngFor="let items of satellites; index as i">
+      <td>{{items.name[i]}}</td>
+      <td>{{items.type[i]}}</td>
+      <td>{{items.operational[i]}}</td>
+      <td>{{items.orbitType[i]}}</td>
+      <td>{{items.launchDate[i]}}</td>
    </tr>
 </table>
